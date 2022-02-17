@@ -1,2 +1,2 @@
-# JogodasCapitais
- Aplicativo desenvolvido para a matéria de Android
+# Jogo das Capitais
+ Aplicativo desenvolvido em sala para a matéria de Desenvolvimento de Dispositivos Móveis

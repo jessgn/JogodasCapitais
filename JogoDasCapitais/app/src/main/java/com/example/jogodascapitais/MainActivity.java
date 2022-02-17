@@ -53,34 +53,34 @@ public class MainActivity extends AppCompatActivity {
         outEstado.setText(estado[qtd]);
     }
 
-    public void avancar(View view){
+    public void next(View view){
         if(aux < 5) {
             qtd = r.nextInt(10);
             TextView outEstado = findViewById(R.id.estado);
             outEstado.setText(estado[qtd]);
             aux++;
-            Button btn1 = (Button) findViewById(R.id.validador);
-            btn1.setEnabled(true);
-            TextView output = findViewById(R.id.Resposta);
+            Button valid = (Button) findViewById(R.id.validador);
+            valid.setEnabled(true);
+            TextView output = findViewById(R.id.textViewOutput);
             output.setText("");
             EditText input = findViewById(R.id.textViewInput);
             input.setText("");
         }
         else{
-            Button btn1 = (Button) findViewById(R.id.validador);
-            Button btn2 = (Button) findViewById(R.id.avancarr);
-            btn1.setEnabled(false);
-            btn2.setEnabled(false);
-            TextView output = findViewById(R.id.Resposta);
+            Button val1 = (Button) findViewById(R.id.validador);
+            Button val2 = (Button) findViewById(R.id.next);
+            val1.setEnabled(false);
+            val2.setEnabled(false);
+            TextView output = findViewById(R.id.textViewOutput);
             output.setText("Fim de Jogo!");
         }
     }
 
     public void validacao(View view){
         EditText input = findViewById(R.id.textViewInput);
-        TextView output = findViewById(R.id.Resposta);
-        TextView pont = findViewById(R.id.pontos);
-        Button btn1 = (Button) findViewById(R.id.validador);
+        TextView output = findViewById(R.id.textViewOutput);
+        TextView ponto = findViewById(R.id.pontos);
+        Button val1 = (Button) findViewById(R.id.validador);
 
         String nome_cidade = capital[qtd];
         if(input.length() == 0){
@@ -89,12 +89,12 @@ public class MainActivity extends AppCompatActivity {
         else if (input.getText().toString().toLowerCase().equals(nome_cidade.toLowerCase())){
             output.setText("Parabéns, a resposta está correta!");
             pontos = pontos + 10;
-            pont.setText(String.valueOf(pontos));
-            btn1.setEnabled(false);
+            ponto.setText(String.valueOf(pontos));
+            val1.setEnabled(false);
         }
         else{
             output.setText("A resposta está incorreta! \nResposta correta é: "+ nome_cidade);
-            btn1.setEnabled(false);
+            val1.setEnabled(false);
         }
     }
 }
