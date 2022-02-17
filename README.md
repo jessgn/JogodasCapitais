@@ -4,7 +4,7 @@
  TADS - UFPR
  
 Alunos: 
-Bruno Stefanes Leal
-Jéssica Gustavo do Nascimento
-Renan Rudney da Silva 
+- Bruno Stefanes Leal
+- Jéssica Gustavo do Nascimento
+- Renan Rudney da Silva 
 
